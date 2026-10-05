@@ -1,0 +1,3 @@
+app_name: ConfigGuard
+environment: development
+port: 8000
