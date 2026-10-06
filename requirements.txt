@@ -1,2 +1,4 @@
 PyYAML==6.0.3
 pytest==9.1.1
+fastapi==0.142.2
+uvicorn==0.54.0
