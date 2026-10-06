@@ -44,3 +44,31 @@ def test_invalid_port():
 
     assert result.returncode == 1
     assert "Invalid type for port" in result.stdout
+
+
+def test_invalid_environment():
+    with open("examples/test_invalid_environment.json", "w") as file:
+        json.dump({
+            "app_name": "ConfigGuard",
+            "environment": "prod",
+            "port": 8000
+        }, file)
+
+    result = run_configguard("examples/test_invalid_environment.json")
+
+    assert result.returncode == 1
+    assert "Invalid value for environment" in result.stdout
+
+
+def test_invalid_port_range():
+    with open("examples/test_invalid_port_range.json", "w") as file:
+        json.dump({
+            "app_name": "ConfigGuard",
+            "environment": "development",
+            "port": 70000
+        }, file)
+
+    result = run_configguard("examples/test_invalid_port_range.json")
+
+    assert result.returncode == 1
+    assert "Invalid port range" in result.stdout
