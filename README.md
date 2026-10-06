@@ -1,10 +1,14 @@
 # ConfigGuard
 
-ConfigGuard is a Python command-line tool that validates JSON and YAML configuration files and provides clear error messages with fix suggestions.
+ConfigGuard is a Python configuration validation tool that validates JSON and YAML configuration files through a command-line interface and a FastAPI REST API.
+
+It provides clear validation errors, fix suggestions, and proper success/failure responses.
 
 ## Features
 
 - Supports JSON and YAML configuration files
+- Command-line configuration validation
+- REST API using FastAPI
 - Checks required configuration fields
 - Validates data types
 - Validates environment values
@@ -12,19 +16,25 @@ ConfigGuard is a Python command-line tool that validates JSON and YAML configura
 - Detects configuration syntax errors
 - Provides clear error messages and fix hints
 - Returns proper success/failure exit codes
-- Includes automated tests using pytest
+- Automated testing using pytest
+- Interactive Swagger/OpenAPI documentation
+- Deployed as a live web API
 - Tested in a WSL2/Linux environment
 
 ## Technologies
 
 - Python
+- FastAPI
+- Pydantic
 - JSON
 - YAML
 - PyYAML
 - argparse
 - pytest
+- Uvicorn
 - WSL2
 - Git & GitHub
+- Render
 
 ## Required Configuration
 
